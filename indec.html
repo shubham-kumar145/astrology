@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology Finder</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Astrology Zodiac Finder</h1>
+        <form id="astroForm">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="day">Birth Day (1-31)</label>
+                <input type="number" id="day" min="1" max="31" required>
+            </div>
+            <div class="form-group">
+                <label for="month">Birth Month (1-12)</label>
+                <input type="number" id="month" min="1" max="12" required>
+            </div>
+            <div class="form-group">
+                <label for="year">Birth Year (e.g. 1990)</label>
+                <input type="number" id="year" min="1900" max="2099" required>
+            </div>
+            <button type="submit" class="submit-btn">Find My Zodiac</button>
+            <button type="button" class="restart-btn" id="reset">Restart</button>
+        </form>
+        <div id="result" class="result-box"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

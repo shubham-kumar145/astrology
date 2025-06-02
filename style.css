@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(135deg, #360755, #3b0a58, #6e1a9a);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(220, 151, 151, 0.05) 1.5px, transparent 1px);
+    background-size: 30px 30px;
+    animation: moveBg 40s linear infinite;
+    z-index: 0;
+}
+
+@keyframes moveBg {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 480px;
+    max-height: 90dvh;
+    overflow-y: auto;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    /* backdrop-filter: blur(15px); */
+    z-index: 1;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.01);
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+form input {
+    width: 100%;
+    padding: 0.9rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+form input::placeholder {
+    color: #ddd;
+}
+
+form input:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(to right, #f857a6, #ff5858);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.submit-btn:hover {
+    transform: scale(1.07);
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+}
+
+.result-box {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1.2rem;
+    border-radius: 15px;
+    font-family: 'Dancing Script', cursive;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    /* backdrop-filter: blur(8px); */
+    animation: fadeIn 0.5s ease-in;
+    color: #ffe5f1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .submit-btn {
+        font-size: 1.1rem;
+    }
+
+    .result-box {
+        font-size: 1.4rem;
+    }
+}
+/* Scrollbar styling for WebKit (Chrome, Edge, Safari) */
+.container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ff6ec4, #7873f5);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: background 0.3s ease;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #ff94d9, #9a8cff);
+}
+
+/* Scrollbar for Firefox */
+.container {
+    scrollbar-width: thin;
+    scrollbar-color: #ff6ec4 rgba(255, 255, 255, 0.1);
+}
+.form-group {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffe5f1;
+    padding-left: 0.2rem;
+    transition: color 0.3s ease;
+}
+
+form input:focus + label,
+label:focus {
+    color: #ffb3ec;
+}
+
+/* More elegant spacing */
+form input {
+    margin-bottom: 0.3rem;
+}
+
+/* Extra polish for input hover */
+form input:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Improve scrollbar visibility subtly */
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ff8fd8, #8d7cff);
+    border-radius: 8px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #ffade9, #a8a0ff);
+}
+.restart-btn {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.35);
+}
+
+.restart-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
+}
