@@ -1,54 +1,4 @@
-// document.getElementById('astroForm').addEventListener('submit', function (e) {
-//     e.preventDefault();
 
-//     const day = parseInt(document.getElementById('day').value);
-//     const month = parseInt(document.getElementById('month').value);
-//     const name = document.getElementById('firstName').value.trim();
-//     const surname = document.getElementById('lastName').value.trim();
-
-//     const zodiac = getZodiacSign(day, month);
-//     const resultBox = document.getElementById('result');
-
-//     resultBox.innerHTML = `Hello <strong>${name} ${surname}</strong>, your zodiac sign is <strong>${zodiac}</strong>! ✨`;
-// });
-
-// function getZodiacSign(day, month) {
-//     if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) return "Aquarius";
-//     if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) return "Pisces";
-//     if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) return "Aries";
-//     if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) return "Taurus";
-//     if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) return "Gemini";
-//     if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) return "Cancer";
-//     if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) return "Leo";
-//     if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) return "Virgo";
-//     if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) return "Libra";
-//     if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) return "Scorpio";
-//     if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) return "Sagittarius";
-//     if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) return "Capricorn";
-
-//     return "Unknown";
-// }
-
-
-// // size of 13
-// const zodiacSigns = [
-//     "Capricorn",
-//     "Aquarius",
-//     "Pisces",
-//     "Aries",
-//     "Taurus",
-//     "Gemini",
-//     "Cancer",
-//     "Leo",
-//     "Virgo",
-//     "Libra",
-//     "Scorpio",
-//     "Sagittarius",
-//     "Capricorn"
-// ];
-
-
-// size of 31
 const compliments = [
     "You radiate energy like a star in perfect alignment.",
     "Your presence brings peace like a full moon on a calm night.",
@@ -297,34 +247,4 @@ form.addEventListener('submit', (event) => {
 });
 const reset = document.getElementById('reset')
 reset.onclick = () => location.reload();
-
-
-
-
-
-// const num1 = Math.floor(Math.random()*30)
-// const num2 = Math.floor(Math.random()*31)
-// const num3 = Math.floor(Math.random()*98)
-// const num4 = Math.floor(Math.random()*19)
-
-// const form = document.getElementById('astroForm')
-// form.addEventListener('submit', (event) => {
-//     console.log('submitted');
-//     event.preventDefault()
-//     const data = new FormData(form)
-//     console.log(data);
-//     const firstName = document.getElementById('firstName').value
-//     const lastName = document.getElementById('lastName').value
-//     const day = Number(document.getElementById('day').value)
-//     const month = Number(document.getElementById('month').value)
-//     const year = Number(document.getElementById('year').value)
-//     console.log(firstName, lastName, day, month, year);
-//     const result = document.getElementById('result')
-//     const first = `hello ${firstName} ${lastName}`
-//     const second = `your zodiac Signs ${zodiacSigns[day]}`
-//     const third = ` ${compliments[day]} ${victimCardCompliments[num2]} ${positiveLifeRecommendations[num3]} ${futurePredictions[num4]}`
-//     result.innerText=first+second+third
-// })
-
-
 
